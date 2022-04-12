@@ -25,7 +25,11 @@ const Home = () => {
 
     if (checkIfDataStatusCorrect(success)) {
       if (colors && colors.length) {
-        setColor(`#${colors[0].hex}`);
+        if (colors[0].hex.length) {
+          setColor(`#${colors[0].hex}`);
+        } else {
+          setColor('#000000');
+        }
       }
     } else {
       // eslint-disable-next-line no-alert

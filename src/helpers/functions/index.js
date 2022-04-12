@@ -1,5 +1,6 @@
-export const checkIfDataStatusCorrect = (status) => {
-  if (status) return status >= 200 && status <= 299;
+export const checkIfDataStatusCorrect = (success) => {
+  if (success) return true;
+  return false;
 };
 
 // eslint-disable-next-line no-bitwise

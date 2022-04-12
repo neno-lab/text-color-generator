@@ -1,9 +1,14 @@
-import { colorApi } from '.';
+import { API_URL } from '../constants';
 
 export const apiGetRandomColor = async () => {
   try {
-    const { data, status } = await colorApi.get(`/color/random?query&timestamp=${new Date().getTime()}`);
-    return { data, status };
+    const fetchRes = await fetch(`${API_URL}/color/random`, {
+      method: 'GET',
+      cors: 'no-cors',
+      cache: 'no-cache'
+    });
+    const { colors, success } = await fetchRes.json();
+    return { colors, success };
   } catch (err) {
     return { status: 500 };
   }

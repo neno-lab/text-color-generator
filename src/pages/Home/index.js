@@ -21,10 +21,9 @@ const Home = () => {
 
   // Function for api call and setting the new state
   const handleOnClickParagraph = async () => {
-    const { data, status } = await apiGetRandomColor();
+    const { colors, success } = await apiGetRandomColor();
 
-    if (checkIfDataStatusCorrect(status)) {
-      const { colors } = data;
+    if (checkIfDataStatusCorrect(success)) {
       if (colors && colors.length) {
         setColor(`#${colors[0].hex}`);
       }
@@ -40,9 +39,12 @@ const Home = () => {
       setPreviousColors([...previousColors, previousColor]);
     }
 
+    // Changing body background
     document.body.style.background = `#${invertHex(color.split('#')[1])}`;
   }, [color]);
 
+  console.log('current color: ', color);
+  console.log('prev color', previousColors);
   return (
     <MainWrapper>
       <Paragraph

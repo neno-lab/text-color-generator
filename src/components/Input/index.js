@@ -3,8 +3,8 @@ import './style.scss';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Input = ({ name, value, onChange }) => (
-  <div className='input-holder'>
+const Input = ({ name, value, onChange, style }) => (
+  <div className='input-holder' style={style}>
     <div className='input-border'>
       <label className={`${value && value.length ? 'invisible' : ''}`} htmlFor={name}>Type...</label>
       <input
@@ -20,7 +20,8 @@ const Input = ({ name, value, onChange }) => (
 Input.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  style: PropTypes.object
 };
 
 export default Input;

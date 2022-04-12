@@ -6,13 +6,19 @@ import Input from '../../components/Input';
 import MainWrapper from '../../containers/MainWrapper';
 import Paragraph from '../../components/Paragraph';
 import React from 'react';
+import SimpleList from '../../components/SimpleList';
 import usePrevious from '../../helpers/hooks/usePrevious';
 
 const Home = () => {
+  // React states
   const [text, setText] = React.useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
   const [color, setColor] = React.useState('#000');
+  const [previousColors, setPreviousColors] = React.useState([]);
+
+  // React refs
   const previousColor = usePrevious(color);
 
+  // Function for api call and setting the new state
   const handleOnClickParagraph = async () => {
     const { data, status } = await apiGetRandomColor();
 
@@ -27,6 +33,13 @@ const Home = () => {
     }
   };
 
+  // Following color state to set previous color state
+  React.useEffect(() => {
+    if (previousColor) {
+      setPreviousColors([...previousColors, previousColor]);
+    }
+  }, [color]);
+
   return (
     <MainWrapper>
       <Paragraph
@@ -36,8 +49,12 @@ const Home = () => {
       />
       <Input
         name='test-input'
+        style={{ marginBottom: '50px' }}
         value={text}
         onChange={inputValue => setText(inputValue)}
+      />
+      <SimpleList
+        items={previousColors}
       />
     </MainWrapper>
   );

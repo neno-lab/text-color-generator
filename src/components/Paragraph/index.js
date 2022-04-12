@@ -3,7 +3,7 @@ import './style.scss';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Paragraph = ({ className, style, text, onClick }) => (
+const Paragraph = ({ className, text, onClick, style }) => (
   <p
     className={className || ''}
     style={style}

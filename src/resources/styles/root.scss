@@ -11,3 +11,30 @@
   border: 0;
   box-shadow: none;
 }
+
+html {
+  --black: #070c27;
+  --black-2: #060b27;
+  --black-3: #20212b;
+  --black-4: #212b36;
+  --dark-gray: #525f7a;
+  --dark-gray-2: #414452;
+  --foggy-gray: #e6e8ec;
+  --icon-gray: #8a97ad;
+  --indigo: #1a1f36;
+  --dark-red: #cc3c64;
+  --light-gray: #697386;
+  --light-gray-2: #f5f8fa;
+  --toggler-gray: #c4cbd5;
+  --button-gray: #e3e8ee;
+  --dark-blue: #2d55fb;
+  --classic-blue: #007aff;
+  --link-blue: #0a84ff;
+  --purple: #764af3;
+  --purple-2: #635bff;
+  --white: #fff;
+  --foggy-white: #f1f3f5;
+  --secondary-input-gray: #8f9bb7;
+  --primary-input-gray: #e8ecf4;
+  --border-container-gray: #e0e1e3;
+}

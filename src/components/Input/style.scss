@@ -1,0 +1,58 @@
+.input {
+  &-holder {
+    width: 100%;
+  }
+
+  &-border {
+    border-radius: 5px;
+    border: solid 1px var(--primary-input-gray);
+    background-color: var(--white);
+    overflow: hidden;
+    position: relative;
+    transition: 0.25s ease;
+
+    @media (min-width: 1025px) {
+      &:hover {
+        border-color: var(--secondary-input-gray);
+      }
+    }
+
+    &:focus-within {
+      border-color: var(--purple);
+      box-shadow: 0 0 0 4px rgba(118, 74, 243, 0.2), 0 0 0 1px var(--purple), inset 0 0 0 1px var(--purple);
+    }
+
+    & > label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: var(--secondary-input-gray);
+      opacity: 1;
+      transition: 0.25s ease;
+      cursor: text;
+
+      &.invisible {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+    & > input {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: var(--indigo);
+    }
+  }
+}

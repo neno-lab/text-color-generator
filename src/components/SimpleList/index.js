@@ -27,9 +27,7 @@ const SimpleList = ({ className }) => {
 };
 
 SimpleList.propTypes = {
-  className: PropTypes.string,
-  items: PropTypes.array,
-  color: PropTypes.string
+  className: PropTypes.string
 };
 
 export default SimpleList;

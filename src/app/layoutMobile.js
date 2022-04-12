@@ -1,7 +1,8 @@
+import Home from '../pages/Home';
 import React from 'react';
 
 const LayoutMobile = () => (
-  <div>LayoutMobile</div>
+  <Home />
 );
 
 export default LayoutMobile;

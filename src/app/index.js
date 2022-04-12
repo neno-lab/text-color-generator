@@ -1,7 +1,15 @@
-import React from 'react';
+import '../resources/styles/root.scss';
 
-const App = () => (
-  <div>App</div>
-);
+import LayoutDesktop from './layoutDesktop';
+import LayoutMobile from './layoutMobile';
+import React from 'react';
+import useWindowSize from '../helpers/hooks/useWindowSize';
+
+const App = () => {
+  const windowSize = useWindowSize();
+
+  if (windowSize.width >= 1025) return <LayoutDesktop />;
+  return <LayoutMobile />;
+};
 
 export default App;

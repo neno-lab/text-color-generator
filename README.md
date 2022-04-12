@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# SeekandHit - entry task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a new project using [create-react-app](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Create a private GitHub repository for the task and add the user noted in the task email as a collaborator.
 
-In the project directory, you can run:
+Push the initial commit without your changes.
 
-### `npm start`
+You can run it with `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Replace `p` tag with a new component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Component specification:
 
-### `npm test`
+- Clicking the component should get a random color from `GET https://www.colr.org/json/color/random.` Mind the caching on the endpoint.
+- Use the random color for the text.
+- Add the previous color to the list described below.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+List specification:
 
-### `npm run build`
+- Previous text colors.
+- 1 color per line.
+- Printed in hex and using that color.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Add a text input on the page. Changing the text on the input should change the text on the component above.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- No requirements regarding implementation.
+- Feel free to add dependencies.
+- Can use fetch for the API call for random color.
+- Bonus for tests. Your choice how.
+- Bonus for changing the background to an inverted color of the random color.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Push your changes.

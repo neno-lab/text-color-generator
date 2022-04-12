@@ -43,8 +43,6 @@ const Home = () => {
     document.body.style.background = `#${invertHex(color.split('#')[1])}`;
   }, [color]);
 
-  console.log('current color: ', color);
-  console.log('prev color', previousColors);
   return (
     <MainWrapper>
       <Paragraph

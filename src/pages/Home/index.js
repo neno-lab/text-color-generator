@@ -1,7 +1,6 @@
 import './style.scss';
 
 import { apiGetRandomColor } from '../../helpers/api/colors';
-import { checkIfDataStatusCorrect } from '../../helpers/functions';
 import Input from '../../components/Input';
 import MainWrapper from '../../containers/MainWrapper';
 import Paragraph from '../../components/Paragraph';
@@ -9,10 +8,12 @@ import React from 'react';
 import SimpleList from '../../components/SimpleList';
 import usePrevious from '../../helpers/hooks/usePrevious';
 
+import { checkIfDataStatusCorrect, invertHex } from '../../helpers/functions';
+
 const Home = () => {
   // React states
   const [text, setText] = React.useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
-  const [color, setColor] = React.useState('#000');
+  const [color, setColor] = React.useState('#000000');
   const [previousColors, setPreviousColors] = React.useState([]);
 
   // React refs
@@ -38,6 +39,8 @@ const Home = () => {
     if (previousColor) {
       setPreviousColors([...previousColors, previousColor]);
     }
+
+    document.body.style.background = `#${invertHex(color.split('#')[1])}`;
   }, [color]);
 
   return (
